@@ -105,9 +105,17 @@ a {
     text-align: center;
 }
 
-.projeto h2 {
+.projeto h2, h3 {
     font-size: 18px;
-    
+}
+
+.projeto h3 {
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
 }
 
 .container-projetos {
@@ -117,6 +125,9 @@ a {
 }
 
 .projeto {
+    display: flex;
+    flex-direction: column; /* Itens dispostos verticalmente */
+    justify-content: space-between;
     border: 1px solid #00a816;
     border-radius: 8px;
     width: 9rem;
@@ -125,6 +136,11 @@ a {
     text-align: center;
     padding: 1rem; 
     text-align: left;
+    position: relative;
+}
+
+.projeto p {
+    flex-grow: 1;
 }
 
 .container-projetos :hover{
@@ -133,7 +149,7 @@ a {
     transition: 0.5s;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     .container-projetos {
         flex-wrap: wrap;
         padding-inline-start: 0px;
