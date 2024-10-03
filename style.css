@@ -1,0 +1,152 @@
+/*  
+Cor de fundo: #2B2929
+Cor de texto: #BDC1CA
+font: "Roboto"
+*/
+
+body {
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    background: rgb(0,18,36);
+    background: linear-gradient(180deg, rgba(0,18,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,80,170,1) 100%);
+    color: #bdc1ca;
+}
+
+main {
+    width: 50vw;
+    margin: 0 auto;
+    background: rgb(2,0,36);
+    padding: 1.5rem;
+    max-width: 800px;
+}
+    
+
+figure {
+    max-width: 160px;
+    max-height: 160px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+figure img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+#sobre-mim {
+    text-align: justify;
+    font-size: 14px;
+}
+
+
+#cards{
+    display: flex;
+    grid-gap: 1rem;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid #00a816;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+li {
+    padding: 0.5rem 0;
+    font-size: 12px;
+}
+
+#redes-sociais {
+    display: flex;
+    justify-content: center;
+    grid-gap: 2rem;
+    height: 3rem;
+    padding-inline-start: 0px;
+}
+
+#redes-sociais li {
+    list-style: none;
+}
+
+.mdi {
+    font-size: 36px;
+}
+
+#redes-sociais a :hover{
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.projeto h2,h4, h3{
+    margin: 5px;
+    text-align: center;
+}
+
+.projeto h2 {
+    font-size: 18px;
+    
+}
+
+.container-projetos {
+    display: flex;
+    box-sizing: border-box;
+    grid-gap: 1rem;
+}
+
+.projeto {
+    border: 1px solid #00a816;
+    border-radius: 8px;
+    width: 9rem;
+    height: 15rem;
+    list-style: none;
+    text-align: center;
+    padding: 1rem; 
+    text-align: left;
+}
+
+.container-projetos :hover{
+    background-color: rgba(0,80,170,1);
+    color: rgb(2,0,36);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1100px) {
+    .container-projetos {
+        flex-wrap: wrap;
+        padding-inline-start: 0px;
+        justify-content: center;
+    }
+    #cards {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container-projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
