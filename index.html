@@ -9,8 +9,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-
-
   </head>
   <body class="bg-gray-900 text-white overflow-x-hidden">
     <!-- Navegação -->
@@ -135,7 +133,9 @@
               projetos que fazem a diferença.
             </p>
             <div class="grid grid-cols-2 gap-4">
-              <div class="flex justify-center items-center p-4 bg-gray-900 rounded-lg">
+              <div
+                class="flex justify-center items-center p-4 bg-gray-900 rounded-lg"
+              >
                 <div class="text-2xl font-bold text-primary">30+</div>
                 <div class="text-sm text-gray-400">Projetos</div>
               </div>
@@ -341,7 +341,11 @@
             <div
               class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center"
             >
-              <img class="h-48" src="./public/Image/find_github.png" alt="find_GitHub" />
+              <img
+                class="h-48"
+                src="./public/Image/find_github.png"
+                alt="find_GitHub"
+              />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-3">Find_GitHub</h3>
@@ -373,11 +377,7 @@
             <div
               class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center"
             >
-              <img
-                class="h-48"
-                src="./public/Image/image_share.png"
-                alt=""
-              />
+              <img class="h-48" src="./public/Image/image_share.png" alt="" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-3">Image_Share</h3>
@@ -457,6 +457,51 @@
               </div>
             </div>
           </div>
+
+          <!-- CumpomTur -->
+          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <img
+                class="h-48"
+                src="./public/Image/cupom_tur.png"
+                alt="CumpomTur"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">CumpomTur</h3>
+              <p class="text-gray-300 mb-4">
+                Sistema web desenvolvido em PHP para gerenciamento de cupons de
+                desconto para estabelecimentos turísticos. Permite que usuários
+                resgatem cupons, empresas criem ofertas e administradores
+                gerenciem todo o sistema.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                  >PHP</span
+                >
+                <span
+                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
+                  >HTML & CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
+                  >MySQL</span
+                >
+              </div>
+              <div class="flex gap-4">
+                <a
+                  target="_blank"
+                  href="https://github.com/OtavioDayrots/Cupons_Turismo"
+                  class="text-primary hover:text-secondary transition-colors"
+                >
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -467,7 +512,9 @@
         <div class="text-2xl font-bold gradient-text mb-4">
           &lt;José Otávio Dev/&gt;
         </div>
-        <p class="text-gray-400 mb-4">Desenvolvido por José Otávio Alves com muito ☕</p>
+        <p class="text-gray-400 mb-4">
+          Desenvolvido por José Otávio Alves
+        </p>
         <div class="flex justify-center space-x-6">
           <a
             href="https://github.com/OtavioDayrots"
@@ -502,9 +549,7 @@
     <script>
       // Typing Animation
       const typingText = document.getElementById("typing-text");
-      const phrases = [
-        "Desenvolvedor Full Stack",
-      ];
+      const phrases = ["Desenvolvedor Full Stack"];
       let phraseIndex = 0;
       let charIndex = 0;
       let isDeleting = false;
