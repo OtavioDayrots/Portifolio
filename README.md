@@ -3,7 +3,7 @@
 Bem-vindo ao meu portfólio! Aqui você encontra uma coleção de projetos, estudos e experimentos front-end. O objetivo é apresentar habilidades em HTML, CSS (incluindo utilitários no estilo Tailwind) e JavaScript, além de boas práticas de estruturação, acessibilidade e performance.
 
 ## 🔗 Demo
-- Publicação (GitHub Pages ou similar): https://portifolio-c01.pages.dev
+- Publicação (GitHub Pages ou similar): https://otaviodayrots-portifolio.pages.dev
 - Visualização local: abra o arquivo `index.html` diretamente no navegador ou use uma extensão como Live Server.
 
 ## 🖼️ Prévia
