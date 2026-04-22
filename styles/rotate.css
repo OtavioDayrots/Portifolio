@@ -12,22 +12,6 @@ section {
 
 .menu-circular {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  pointer-events: all;
-  transform: rotate(0deg);
-  transition: transform 0.6s ease;
-}
-
-.menu-circular svg {
-  width: 100%;
-  height: 100%;
-}
-
-.menu-circular {
-  position: fixed;
   bottom: -60px;
   left: -60px;
   width: 250px;
@@ -36,6 +20,12 @@ section {
   transition: transform 0.6s ease;
   z-index: 9999;
 }
+
+.menu-circular svg {
+  width: 100%;
+  height: 100%;
+}
+
 .areas,
 .labels {
   transform-origin: center;
@@ -47,12 +37,12 @@ section {
   cursor: pointer;
 }
 
-.area:hover {
-  fill: rgba(0, 0, 0, 0.1);
+.area.active {
+  fill: #52525233;
 }
 
-.area.active {
-  fill: rgba(0, 0, 0, 0.2);
+.area:hover {
+  fill: #ffffff1a;
 }
 
 .labels {
@@ -62,7 +52,7 @@ section {
 .labels text {
   font-size: 14px;
   pointer-events: none;
-  fill: #333;
+  fill: #fff;
   font-weight: bold;
 }
 

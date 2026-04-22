@@ -57,7 +57,7 @@ function updateImageTransform() {
   const img = document.querySelector(".foto");
 
   img.style.transform = `
-    perspective(600px)
+    perspective(1000px)
     rotateX(${rotateX}deg)
     rotateY(${rotateY}deg)
     rotate(${extraRotate}deg)
