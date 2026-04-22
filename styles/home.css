@@ -1,7 +1,6 @@
 #home {
   flex-direction: column;
-  background-color: black;
-
+  
   h1{
     color: white;
     font-size: 2.5em;
