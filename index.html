@@ -1,678 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>José Otávio DEV - Desenvolvedor Full Stack</title>
-    <link rel="stylesheet" href="./public/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-gray-900 text-white overflow-x-hidden">
-    <!-- Navegação -->
-    <nav
-      class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800"
-    >
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold gradient-text">
-            &lt;José Otávio Dev/&gt;
-          </div>
-          <div class="hidden md:flex space-x-8">
-            <a
-              href="index.html#home"
-              class="hover:text-primary transition-colors"
-              >Início</a
-            >
-            <a
-              href="index.html#about"
-              class="hover:text-primary transition-colors"
-              >Sobre</a
-            >
-            <a
-              href="index.html#skills"
-              class="hover:text-primary transition-colors"
-              >Skills</a
-            >
-            <a
-              href="index.html#projects"
-              class="hover:text-primary transition-colors"
-              >Projetos</a
-            >
-            <a
-              href="./Src/views/contato.html"
-              class="text-primary transition-colors"
-              >Contato</a
-            >
-          </div>
-          <button class="md:hidden text-white">
-            <i class="fas fa-bars"></i>
-          </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otavio Dayrots Portifólio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav class="menu-circular">
+            <svg viewBox="0 0 200 200">
+
+                <!-- DEFINIÇÃO DOS ARCOS -->
+                <defs>
+                <path id="arc1" d="M 100 100 L 100 20 A 80 80 0 0 1 180 100 Z" />
+                <path id="arc2" d="M 100 100 L 180 100 A 80 80 0 0 1 100 180 Z" />
+                <path id="arc3" d="M 100 100 L 100 180 A 80 80 0 0 1 20 100 Z" />
+                <path id="arc4" d="M 100 100 L 20 100 A 80 80 0 0 1 100 20 Z" />
+
+                <!-- CAMINHOS PARA TEXTO -->
+                <path id="text1" d="M 100 30 A 70 70 0 0 1 170 100" />
+                <path id="text2" d="M 170 100 A 70 70 0 0 1 100 170" />
+                <path id="text3" d="M 100 170 A 70 70 0 0 1 30 100" />
+                <path id="text4" d="M 30 100 A 70 70 0 0 1 100 30" />
+                </defs>
+
+                <!-- ÁREAS CLICÁVEIS -->
+                <g class="areas">
+                <path class="area" data-index="0" d="M 100 100 L 100 20 A 80 80 0 0 1 180 100 Z"/>
+                <path class="area" data-index="1" d="M 100 100 L 180 100 A 80 80 0 0 1 100 180 Z"/>
+                <path class="area" data-index="2" d="M 100 100 L 100 180 A 80 80 0 0 1 20 100 Z"/>
+                <path class="area" data-index="3" d="M 100 100 L 20 100 A 80 80 0 0 1 100 20 Z"/>
+                </g>
+
+                <!-- TEXTOS CURVADOS -->
+                <g class="labels">
+                <text><textPath href="#text1" startOffset="50%" text-anchor="middle">HOME</textPath></text>
+                <text><textPath href="#text2" startOffset="50%" text-anchor="middle">SOBRE</textPath></text>
+                <text><textPath href="#text3" startOffset="50%" text-anchor="middle">PROJETOS</textPath></text>
+                <text><textPath href="#text4" startOffset="50%" text-anchor="middle">EVENTOS</textPath></text>
+                </g>
+
+            </svg>
+        </nav>
+
+        <div class="wheel"></div>
+        <div class="conteudo"></div>
+        <div class="viewport">
+            <div class="rotator">
+                <section id="home">
+                    <h1>Pode me chamar de <span class="nome">José Otávio Alves</span></h1>
+                    <p>Eu sou Desenvolvedor <span class="meus-titulos"></span></p>
+                </section>
+                <section id="sobre">
+                    <h2>Sobre mim</h2>
+                    <p>Sou um desenvolvedor apaixonado por tecnologia e inovação. Tenho experiência em diversas linguagens de programação e estou sempre buscando aprender novas habilidades para me manter atualizado no mercado.</p>
+                </section>
+                <section id="projetos">
+                    <h2>Projetos</h2>
+                    <ul>
+                        <li><a href="#">Projeto 1</a></li>
+                        <li><a href="#">Projeto 2</a></li>
+                        <li><a href="#">Projeto 3</a></li>
+                    </ul>
+                </section>
+                <section id="eventos">
+                    <h2>Eventos</h2>
+                    <p>Participei de diversos eventos e conferências sobre tecnologia e desenvolvimento.</p>
+                </section>
+                <!-- <section id="contatos">
+                    <h2>Contato</h2>
+                    <p>Você pode me encontrar nas redes sociais ou enviar um email para <a href="mailto:">email@exemplo.com</a></p>
+                </section> -->
+            </div>
         </div>
-      </div>
-    </nav>
-
-    <!--Welcome-->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800"
-    >
-      <div class="text-center animate-slide-up">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          Olá,Me chamo <span class="gradient-text">José Otávio Alves</span>
-        </h1>
-        <p class="text-xl md:text-2xl mb-8">
-          Eu sou <span id="typing-text" class="text-indigo-400"></span>
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#projects"
-            class="bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform animate-glow"
-          >
-            Ver Projetos
-          </a>
-          <a
-            href="./Src/views/contato.html"
-            class="border-2 border-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:scale-105 transition-all"
-          >
-            Entre em Contato
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sobre Mim -->
-    <section id="about" class="py-20 bg-gray-800/50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Sobre Mim
-          </h2>
-          <div
-            class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"
-          ></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="animate-slide-up">
-            <div class="relative">
-              <div
-                class="w-80 h-80 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full p-1"
-              >
-                <div
-                  class="w-full h-full bg-gray-900 rounded-full flex items-center justify-center overflow-hidden"
-                >
-                  <img
-                    src="https://avatars.githubusercontent.com/u/152044189?v=4"
-                    alt="Minha Foto"
-                    class="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-              </div>
-              <div
-                class="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full animate-float"
-              ></div>
-              <div
-                class="absolute -bottom-4 -left-4 w-16 h-16 bg-success rounded-full animate-float"
-                style="animation-delay: 1s"
-              ></div>
-            </div>
-          </div>
-          <div class="animate-slide-up" style="animation-delay: 0.2s">
-            <h3 class="text-2xl font-bold mb-6 text-primary">
-              Desenvolvedor Full Stack
-            </h3>
-            <p class="text-gray-300 mb-6 leading-relaxed">
-              Sou um desenvolvedor apaixonado por tecnologia, criando aplicações
-              web, Mobile e Desktop
-            </p>
-            <p class="text-gray-300 mb-8 leading-relaxed">
-              Sempre em busca de novos desafios e oportunidades para crescer
-              profissionalmente, adoro trabalhar em equipe e contribuir para
-              projetos que fazem a diferença.
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div
-                class="flex justify-center items-center p-4 bg-gray-900 rounded-lg"
-              >
-                <div class="text-2xl font-bold text-primary">30+</div>
-                <div class="text-sm text-gray-400">Projetos</div>
-              </div>
-              <div class="text-center p-4 bg-gray-900 rounded-lg">
-                <div class="text-2xl font-bold text-secondary">
-                  Estagiario / Junior
-                </div>
-                <div class="text-sm text-gray-400">Experiência</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="py-20">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Minhas Skills
-          </h2>
-          <div
-            class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"
-          ></div>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Frontend -->
-          <div class="bg-gray-800 p-6 rounded-xl card-hover">
-            <div class="text-center">
-              <div
-                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i class="fab fa-html5 text-2xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Frontend</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div>HTML & CSS</div>
-                <div>JavaScript</div>
-                <div>Next Js</div>
-                <div>Tailwind CSS</div>
-                <div>React Js</div>
-                <div>React Native</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="bg-gray-800 p-6 rounded-xl card-hover">
-            <div class="text-center">
-              <div
-                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i class="fab fa-php text-2xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Backend</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div>PHP</div>
-                <div>Python</div>
-                <div>MySQL</div>
-                <div>PostgreSQL</div>
-                <div>SQL Server</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ferramentas -->
-          <div class="bg-gray-800 p-6 rounded-xl card-hover">
-            <div class="text-center">
-              <div
-                class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i class="fas fa-tools text-2xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Ferramentas</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div>Git & GitHub</div>
-                <div>VS Code</div>
-                <div>Figma</div>
-                <div>QGIS</div>
-                <div>DBeaver</div>
-                <div>MySQL Workbench</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Outros -->
-          <div class="bg-gray-800 p-6 rounded-xl card-hover">
-            <div class="text-center">
-              <div
-                class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i class="fas fa-lightbulb text-2xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Outros</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div>Inglês Intermediario</div>
-                <div>MVC</div>
-                <div>Scrum & Agile</div>
-                <div>Responsive Design</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção de Projetos -->
-    <section id="projects" class="py-20 bg-gray-800/50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-            Meus Projetos
-          </h2>
-          <div
-            class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"
-          ></div>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Energy_Bill_Parser-->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <img src="./public/Image/energy.png" alt="" />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Energy_Bill_Parser</h3>
-              <p class="text-gray-300 mb-4">
-                Leitor de Faturas de Energia → Excel <br />
-                Extrai dados de descontos de energia injetada de PDFs e gera
-                relatórios Excel.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >Python</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/OtavioDayrots/Energy_Bill_Parser"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Galeria-Voucher -->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <img
-                class="h-48"
-                src="./public/Image/galeria_voucher.png"
-                alt=""
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Galeria-Voucher</h3>
-              <p class="text-gray-300 mb-4">
-                A Galeria Voucher é um projeto desenvolvido para exibir as
-                turmas participantes do programa governamental de formação
-                técnica em Desenvolvimento de Sistemas, com destaque para os
-                Projetos Integradores (PI) criados durante o curso.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >PHP</span
-                >
-                <span
-                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
-                  >HTML & CSS</span
-                >
-                <span
-                  class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
-                  >JavaScript</span
-                >
-                <span
-                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
-                  >MySQL</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/VoucherDesenvSenacHub/galeria-voucher"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!--Find_GitHub-->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center"
-            >
-              <img
-                class="h-48"
-                src="./public/Image/find_github.png"
-                alt="find_GitHub"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Find_GitHub</h3>
-              <p class="text-gray-300 mb-4">
-                Aplicativo mobile feito em React Native (Expo) para buscar e
-                visualizar rapidamente perfis do GitHub.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >React Native</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/OtavioDayrots/Find_GitHub"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!--ImageShare
--->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center"
-            >
-              <img class="h-48" src="./public/Image/image_share.png" alt="" />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">Image_Share</h3>
-              <p class="text-gray-300 mb-4">
-                Um sistema web simples e intuitivo para upload, exibição e
-                download de imagens. Permite que usuários cadastrem-se, enviem
-                suas fotos, visualizem todas as imagens em uma galeria
-                organizada e façam o download das imagens desejadas.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >PHP</span
-                >
-                <span
-                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
-                  >HTML & CSS</span
-                >
-                <span
-                  class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
-                  >MySQL</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/OtavioDayrots/Image_Share"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- FilmesDB -->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <img
-                class="h-48"
-                src="./public/Image/filmesDB.png"
-                alt="FilmesDB"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">FilmesDB</h3>
-              <p class="text-gray-300 mb-4">
-                Este é um projeto web desenvolvido como parte do curso técnico
-                de Desenvolvimento de Sistemas, focado no gerenciamento de um
-                sistema de cadastro de filmes. Utiliza PHP, MySQL e HTML/CSS
-                para criar uma aplicação funcional e interativa.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >PHP</span
-                >
-                <span
-                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
-                  >HTML & CSS</span
-                >
-                <span
-                  class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
-                  >MySQL</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/OtavioDayrots/FilmesDB"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CumpomTur -->
-          <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <img
-                class="h-48"
-                src="./public/Image/cupom_tur.png"
-                alt="CumpomTur"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-3">CumpomTur</h3>
-              <p class="text-gray-300 mb-4">
-                Sistema web desenvolvido em PHP para gerenciamento de cupons de
-                desconto para estabelecimentos turísticos. Permite que usuários
-                resgatem cupons, empresas criem ofertas e administradores
-                gerenciem todo o sistema.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
-                  >PHP</span
-                >
-                <span
-                  class="px-3 py-1 bg-tech/20 text-tech rounded-full text-sm"
-                  >HTML & CSS</span
-                >
-                <span
-                  class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
-                  >MySQL</span
-                >
-              </div>
-              <div class="flex gap-4">
-                <a
-                  target="_blank"
-                  href="https://github.com/OtavioDayrots/Cupons_Turismo"
-                  class="text-primary hover:text-secondary transition-colors"
-                >
-                  <i class="fab fa-github"></i> Código
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-8">
-      <div class="container mx-auto px-6 text-center">
-        <div class="text-2xl font-bold gradient-text mb-4">
-          &lt;José Otávio Dev/&gt;
-        </div>
-        <p class="text-gray-400 mb-4">
-          Desenvolvido por José Otávio Alves
-        </p>
-        <div class="flex justify-center space-x-6">
-          <a
-            href="https://github.com/OtavioDayrots"
-            target="_blank"
-            class="text-gray-400 hover:text-primary transition-colors"
-          >
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/joseotaviodayrots"
-            target="_blank"
-            class="text-gray-400 hover:text-primary transition-colors"
-          >
-            <i class="fab fa-linkedin text-xl"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/tavio_vieira"
-            target="_blank"
-            class="text-gray-400 hover:text-primary transition-colors"
-          >
-            <i class="fab fa-instagram text-xl"></i>
-          </a>
-        </div>
-        <p class="text-gray-500 mt-4 text-sm">
-          ©
-          <?php echo date('Y'); ?>
-          Todos os direitos reservados.
-        </p>
-      </div>
-    </footer>
-
-    <script>
-      // Typing Animation
-      const typingText = document.getElementById("typing-text");
-      const phrases = ["Desenvolvedor Full Stack"];
-      let phraseIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function typeWriter() {
-        const currentPhrase = phrases[phraseIndex];
-        if (isDeleting) {
-          typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-          charIndex--;
-        } else {
-          typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-          charIndex++;
-        }
-
-        let typeSpeed = isDeleting ? 50 : 100;
-        if (!isDeleting && charIndex === currentPhrase.length) {
-          typeSpeed = 2000;
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          typeSpeed = 500;
-        }
-        setTimeout(typeWriter, typeSpeed);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(typeWriter, 1000);
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-              target.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-          });
-        });
-
-        // Scroll animations
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: "0px 0px -50px 0px",
-        };
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
-            }
-          });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll(".animate-slide-up");
-        animatedElements.forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(30px)";
-          el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-          observer.observe(el);
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector("button.md\\:hidden");
-        const mobileMenu = document.createElement("div");
-        mobileMenu.className = "md:hidden bg-gray-900 border-t border-gray-800";
-        mobileMenu.innerHTML = `
-                <div class="px-6 py-4 space-y-4">
-                    <a href="#home" class="block hover:text-indigo-400 transition-colors">Início</a>
-                    <a href="#about" class="block hover:text-indigo-400 transition-colors">Sobre</a>
-                    <a href="#skills" class="block hover:text-indigo-400 transition-colors">Skills</a>
-                    <a href="#projects" class="block hover:text-indigo-400 transition-colors">Projetos</a>
-                    <a href="./Src/views/contato.html" class="block hover:text-indigo-400 transition-colors">Contato</a>
-                </div>
-            `;
-        let mobileMenuOpen = false;
-        mobileMenuBtn.addEventListener("click", () => {
-          if (!mobileMenuOpen) {
-            document.querySelector("nav").appendChild(mobileMenu);
-            mobileMenuOpen = true;
-          } else {
-            mobileMenu.remove();
-            mobileMenuOpen = false;
-          }
-        });
-
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target.tagName === "A") {
-            mobileMenu.remove();
-            mobileMenuOpen = false;
-          }
-        });
-
-        // Navbar background on scroll
-        window.addEventListener("scroll", () => {
-          const navbar = document.querySelector("nav");
-          if (window.scrollY > 100) {
-            navbar.style.backgroundColor = "rgba(17, 24, 39, 0.95)";
-          } else {
-            navbar.style.backgroundColor = "rgba(17, 24, 39, 0.8)";
-          }
-        });
-
-        // Project card hover
-        document.querySelectorAll(".card-hover").forEach((card) => {
-          card.addEventListener("mouseenter", function () {
-            this.style.transform = "translateY(-10px) scale(1.02)";
-          });
-          card.addEventListener("mouseleave", function () {
-            this.style.transform = "translateY(0) scale(1)";
-          });
-        });
-
-        // Parallax effect
-        window.addEventListener("scroll", () => {
-          const scrolled = window.pageYOffset;
-          const parallaxElements = document.querySelectorAll(".animate-float");
-          parallaxElements.forEach((element, index) => {
-            const speed = 0.5 + index * 0.1;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-          });
-        });
-      });
-    </script>
-  </body>
+    </main>
+</body>
 </html>
