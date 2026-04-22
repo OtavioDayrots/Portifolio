@@ -5,22 +5,6 @@ let isScrolling = false;
 
 const areas = document.querySelectorAll(".area");
 
-// Titulos para o efeito de digitação
-const titulos = [
-  "Front End ",
-  "JavaScript ",
-  "Back End ",
-  "Python ",
-  "PHP ",
-  "Full Stack "
-];
-
-const span = document.querySelector(".meus-titulos");
-
-let index = 0;
-let charIndex = 0;
-let isDeleting = false;
-
 // Rotação da tela
 window.addEventListener("wheel", (e) => {
   if (isScrolling) return;
@@ -72,31 +56,3 @@ areas.forEach(area => {
     updateUI();
   });
 });
-
-// Efeito de digitação nos titulos
-function typeEffect() {
-  const current = titulos[index];
-
-  if (isDeleting) {
-    span.textContent = current.substring(0, charIndex);
-    charIndex--;
-  } else {
-    span.textContent = current.substring(0, charIndex);
-    charIndex++;
-  }
-
-  let speed = isDeleting ? 50 : 100;
-
-  if (!isDeleting && charIndex === current.length) {
-    speed = 1200;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    index = (index + 1) % titulos.length;
-    speed = 300;
-  }
-
-  setTimeout(typeEffect, speed);
-}
-
-typeEffect();
