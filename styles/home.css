@@ -1,14 +1,20 @@
 #home {
+  align-items: start;
   flex-direction: column;
+  padding: 3rem;
   
   h1{
     color: white;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+
+    span {
+      font-size: 2em;
+    }
   }
   p {
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
   }
 }
 
@@ -24,7 +30,7 @@
 
 @keyframes typing {
   to {
-    width: 47%;
+    width: 100%;
   }
 }
 
@@ -56,34 +62,11 @@
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
   will-change: transform;
+  z-index: 1;
+  z-index: 1;
 }
 
 .foto-container:hover .foto {
   transform: rotateY(8deg) rotateX(5deg) scale(1.05);
   filter: brightness(1.08) contrast(1.08) saturate(1.05);
-}
-
-.shine {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-
-  pointer-events: none;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(255,255,255,0.25) 0%,
-    rgba(255,255,255,0.1) 20%,
-    transparent 40%
-  );
-
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-.foto-container:hover .shine {
-  opacity: 1;
 }

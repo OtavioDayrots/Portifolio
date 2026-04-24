@@ -73,7 +73,6 @@ function updateImageTransform() {
 
     document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".foto-container");
-    const shine = document.querySelector(".shine");
 
     container.addEventListener("mousemove", (e) => {
         const rect = container.getBoundingClientRect();
@@ -87,32 +86,12 @@ function updateImageTransform() {
         centerY = rect.height / 2;
 
         // rotação 3D
-        rotateX = -(y - centerY) / 15;
-        rotateY = (x - centerX) / 15;
-
-        // brilho
-        const percentX = x / rect.width;
-        const percentY = y / rect.height;
-
-        shine.style.transform = `
-        translate(${percentX * 50}%, ${percentY * 50}%)
-        `;
+        rotateX = -(y - centerY) / 20;
+        rotateY = (x - centerX) / 20;
 
         // atualiza imagem
         mouseX = x;
         mouseY = y;
-
-        updateImageTransform();
-    });
-
-    container.addEventListener("mouseleave", () => {
-        rotateX = 0;
-        rotateY = 0;
-
-        mouseX = centerX;
-        mouseY = centerY;
-
-        shine.style.transform = `translate(0%, 0%)`;
 
         updateImageTransform();
     });

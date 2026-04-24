@@ -1,5 +1,9 @@
 main{
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 1.2s ease-in-out;
+  background: linear-gradient(135deg, #0f0f0f, #242430);
 }
 
 section {
@@ -62,10 +66,6 @@ section {
 
 .wheel {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 2px solid black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

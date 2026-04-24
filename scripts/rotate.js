@@ -39,6 +39,16 @@ function updateUI() {
   document.querySelector(".labels").style.transform =
     `rotate(-${angle}deg)`;
 
+  const gradients = [
+    "linear-gradient(135deg, #0f0f0f, #242430)", // Home
+    "linear-gradient(135deg, #0d1b2a, #232d41)", // Sobre
+    "linear-gradient(135deg, #1b063d, #4d3663)", // Projetos
+    "linear-gradient(135deg, #3c119b, #302e46)"  // Eventos
+  ];
+
+  document.querySelector("main").style.background =
+    gradients[currentIndex];
+
   updateMenu();
 }
 
